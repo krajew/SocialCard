@@ -1,7 +1,0 @@
-.grid {
-  width: 600px;
-  min-height: 700px;
-
-  display: grid;
-  grid-template: 50px minmax(200px 500px) 400px 50px / 50px 500px 50px;
-}

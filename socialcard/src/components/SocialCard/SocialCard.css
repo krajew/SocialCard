@@ -1,0 +1,10 @@
+.card {
+  width: 700px;
+  min-height: 400px;
+
+  margin: 100px auto;
+  background-color: #F5F5F5;
+
+  display: grid;
+  grid-template: 70px 1fr 2fr 50px / 50px 1fr 1fr 50px;
+}
