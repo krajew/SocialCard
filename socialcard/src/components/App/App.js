@@ -27,7 +27,7 @@ class App extends React.Component {
               year: '2019'
             }
           },
-          photoNumber: 0;
+          photoNumber: 0
         }
       ]
     }
