@@ -25,11 +25,40 @@ class App extends React.Component {
               day: '24',
               month: '09',
               year: '2019'
-            }
-          },
-          photoNumber: 0
+            },
+            photoNumber: 0
+          }
         }
       ]
+    }
+  }
+
+  handlePhotoSlide = (mark) => {
+    let length = this.state.posts[0].post.photos.length;
+    let number = this.state.posts[0].post.photoNumber;
+
+    if (length > 0) {
+      if (mark === '-') {
+        if (number === 0) {
+          this.setState({
+            photoNumber: length - 1
+          })
+        } else {
+          this.setState({
+            photoNumber: number - 1
+          })
+        }
+      } else {
+        if (number === (length - 1)) {
+          this.setState({
+            photoNumber: 0
+          })
+        } else {
+          this.setState({
+            photoNumber: number + 1
+          })
+        }
+      }
     }
   }
 
@@ -38,7 +67,7 @@ class App extends React.Component {
       <div className="grid">
         {
           this.state.posts.map(post => {
-            return <SocialCard post={post} />
+            return <SocialCard post={post} handleSlide={this.handlePhotoSlide} />
           })
         }
       </div>
