@@ -9,7 +9,7 @@ class SocialCard extends React.Component {
     return (
       <div className='card'>
         <User user={this.props.post.user} date={this.props.post.post.date} />
-        <Article post={this.props.post.post} handleSlide={this.props.handleSlide} />
+        <Article post={this.props.post.post} handleSlide={this.props.handleSlide} index={this.props.index} />
       </div>
     )
   }

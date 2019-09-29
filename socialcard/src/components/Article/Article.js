@@ -13,12 +13,12 @@ class Article extends React.Component {
   render() {
     return (
       <div className="article">
-        <article>{this.props.post.article}</article>
+        <article class="article-text">{this.props.post.article}</article>
 
         <div className="photoContainer">
-          <img className="arrow right" src={require('./arrow.png')} onClick={this.handleRightClick} />
-          <img className="photo" src={this.props.post.photos[this.props.post.photoNumber]} />
-          <img className="arrow left" src={require('./arrow.png')} onClick={this.handleLeftClick} />
+          <img className="arrow right" src={require('./arrow.png')} onClick={this.handleRightClick} alt="right arrow" />
+          <img className="photo" src={this.props.post.photos[this.props.index]} alt="post photos" />
+          <img className="arrow left" src={require('./arrow.png')} onClick={this.handleLeftClick} alt="left arrow" />
         </div>
         
       </div>
