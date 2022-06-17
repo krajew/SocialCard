@@ -1,2 +1,2 @@
 # SocialCard
-Social card facebook-like
+Facebook similar social card.
